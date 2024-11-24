@@ -11,74 +11,57 @@
 - title: Education
   type: time_table
   contents:
+    - title: PhD candidate
+      institution: KAIST, Daejeon, Republic of Korea
+      year: 2024.03-
+      description:
+        - title: Mobility (Major)
+          contents:
+            - Fusion of Phisics Integrity and AI Creativity
+    
     - title: Master
       institution: KAIST, Daejeon, Republic of Korea
       year: 2022.03-2024.02
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - title: Mobility (Major)
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    
+            - AI-driven Design Optimization
+        - title: Entrepreneurship (Minor)
+          contents:
+            - Problem Solving Skill
+            - Leadership
+            - Entrepreneurship
+            
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: AI Researcher (Co-founder)
+      institution: Narnia Labs
+      year: 2022 - 
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+        - AI algorithm development
+        - Project Managing
+        - AI Research
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2023
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+        - Outstanding Paper Award (KSME)
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: AI-driven Design Optimization
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Generative Model
+        - Optimization Algorithm
+    - title: Fusion of Phisics Integrity and AI Creativity
       items:
-        - Description 1.
-        - Description 2.
+        - Design Optimization with Generative Model
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Playing tennis, Watchin Formula 1, etc.
