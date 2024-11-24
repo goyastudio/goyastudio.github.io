@@ -11,7 +11,9 @@ nav_order: 1
 
 <!-- Bibsearch Feature -->
 
-{% bibliography -f {{ site.scholar.bibliography }} %}
+{% include bib_search.liquid %}
+
+{% bibliography %}
 
 
 
