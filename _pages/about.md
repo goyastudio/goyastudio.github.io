@@ -17,9 +17,8 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+I am a Ph.D. student at [KAIST](https://www.kaist.ac.kr/en/). I am conducting research at the intersection of the rigor of physics and the creativity of AI. Under the overarching theme of "AI-driven Design Optimization," my goal is to redefine how AI can be effectively utilized in engineering, offering a fresh perspective that diverges from traditional methodologies. Additionally, as an AI researcher at [Narnia Labs](https://www.narnia.ai/?r=0), I collaborate with global companies, addressing real-world industrial challenges. My aim is to propose general algorithms that can be broadly applied across various industries, rather than focusing solely on domain-specific solutions that are restricted to laboratory settings.
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am also a co-founder of [Narnia Labs](https://www.narnia.ai/?r=0) and have completed a minor in Entrepreneurship at KAIST's [K-School]([https://www.kaist.ac.kr/en/](https://kschool.kaist.ac.kr/Eng/Index)). This reflects my deep interest in the startup ecosystem, and I aspire to take a deep dive into this ecosystem as a proactive player in the future.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Prior to joining KAIST, I earned my Master's degree from [KAIST](https://www.kaist.ac.kr/en/) and a Bachelor's degree in [Mechanical Engineering](https://mech.inha.ac.kr/mech/index.do) from Inha University, Korea.
