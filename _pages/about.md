@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://kaist.ac.kr/kr/'>CCS School of Mobility, KAIST</a>.
+subtitle: <a href='https://kaist.ac.kr/kr/'> CCS School of Mobility, KAIST</a>.
 
 profile:
   align: right
