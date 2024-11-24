@@ -11,10 +11,8 @@ nav_order: 2
 
 <!-- Bibsearch Feature -->
 
-{% include bib_search.liquid %}
+{% bibliography -f {{ site.scholar.bibliography }} %}
 
-<div class="publications">
 
-{% bibliography %}
 
 </div>
