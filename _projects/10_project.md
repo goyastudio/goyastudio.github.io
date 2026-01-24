@@ -6,8 +6,8 @@ img: assets/img/lse.png
 importance: 1
 category: work
 related_publications: false
-start_date: 2021-01-01
-end_date: 2023-01-01
+start_date: 2024-01-01
+end_date: 2026-02-28
 ---
 
 ## Project Overview
@@ -59,7 +59,7 @@ The successful completion of this project demonstrated the viability of AI-drive
 
 ---
 
-**Project Duration**: 2 years
+**Project Duration**: January 2024 - February 2026
 **Partner**: LS ELECTRIC
 **Organization**: Narnia Labs
 

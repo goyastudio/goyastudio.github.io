@@ -1,6 +1,6 @@
 ---
 layout: page
-title: AI-Based Vehicle Crash Kinematics Prediction
+title: Machine Learning-based Vehicle Kinematic Response Prediction for Small Overlap Crash
 description: Machine learning system for predicting small overlap crash response using early-stage design data
 img: assets/img/hmc.png
 importance: 3
@@ -98,4 +98,6 @@ The methodology developed in this project demonstrates how AI can transform trad
 
 **Project Duration**: May 2021 - May 2022 (1 year)
 **Client**: Hyundai Motor Company
-**Organization**: Narnia Labs
+**Organization**: Smart Design Lab, KAIST
+
+**Reference**: [학술논문 링크](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11182367)

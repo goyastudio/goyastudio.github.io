@@ -1,6 +1,6 @@
 ---
 layout: page
-title: AI-Driven Plant Equipment Layout Optimization
+title: Large-scale Layout Optimization for Chemical Plant
 description: Generative design algorithm for automated multi-layer facility layout optimization
 img: assets/img/dlenc.png
 importance: 2
@@ -75,4 +75,6 @@ The methodology developed can be applied to various types of industrial faciliti
 
 **Project Duration**: May 2021 - October 2022 (18 months)
 **Client**: DLE&C
-**Organization**: Narnia Labs
+**Organization**: Smart Design Lab, KAIST
+
+**Reference**: [학술논문 링크](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11181975)
