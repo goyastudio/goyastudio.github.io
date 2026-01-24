@@ -14,6 +14,12 @@
       <div class="card-body">
         <h2 class="card-title">{{ project.title }}</h2>
         <p class="card-text">{{ project.description }}</p>
+        {% if project.start_date and project.end_date %}
+          <p class="text-muted" style="font-size: 0.9rem;">
+            <i class="fa-regular fa-calendar"></i>
+            {{ project.start_date | date: "%Y.%m" }} - {{ project.end_date | date: "%Y.%m" }}
+          </p>
+        {% endif %}
         <div class="row ml-1 mr-1 p-0">
           {% if project.github %}
             <div class="github-icon">
