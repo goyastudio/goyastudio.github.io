@@ -1,0 +1,67 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Yongmin Kwon
+    - name: Date of Birth
+      value: 31st January 1997
+    - name: Languages
+      value: Korean, English
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD candidate
+      institution: KAIST, Daejeon, Republic of Korea
+      year: 2024.03-
+      description:
+        - title: Mobility (Major)
+          contents:
+            - Fusion of Phisics Integrity and AI Creativity
+    
+    - title: Master
+      institution: KAIST, Daejeon, Republic of Korea
+      year: 2022.03-2024.02
+      description:
+        - title: Mobility (Major)
+          contents:
+            - AI-driven Design Optimization
+        - title: Entrepreneurship (Minor)
+          contents:
+            - Problem Solving Skill
+            - Leadership
+            - Entrepreneurship
+            
+- title: Experience
+  type: time_table
+  contents:
+    - title: AI Researcher (Co-founder)
+      institution: Narnia Labs
+      year: 2022 - 
+      description:
+        - AI algorithm development
+        - Project Managing
+        - AI Research
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2023
+      items:
+        - Outstanding Paper Award (KSME)
+
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: AI-driven Design Optimization
+      items:
+        - Generative Model
+        - Optimization Algorithm
+    - title: Fusion of Phisics Integrity and AI Creativity
+      items:
+        - Design Optimization with Generative Model
+
+- title: Other Interests
+  type: list
+  contents:
+    - <u>Hobbies:</u> Playing tennis, Watchin Formula 1, etc.

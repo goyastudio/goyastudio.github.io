@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ruby --version:*)",
+      "Bash(bundle --version:*)",
+      "Bash(docker --version:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
