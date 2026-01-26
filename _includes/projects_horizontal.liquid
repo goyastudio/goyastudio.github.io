@@ -3,13 +3,13 @@
     <div class="card h-100 hoverable">
       <div class="row no-gutters">
         {% if project.img %}
-          <div class="col-md-4">
-            <div class="project-img-square">
-              {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 250px, 50vw" alt="project thumbnail" %}
+          <div class="col-md-9">
+            <div class="project-img-wide">
+              {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 800px, 90vw" alt="project thumbnail" %}
             </div>
           </div>
         {% endif %}
-        <div class="{% if project.img %}col-md-8{% else %}col-md-12{% endif %}">
+        <div class="{% if project.img %}col-md-3{% else %}col-md-12{% endif %}">
           <div class="card-body">
             <h3 class="card-title">{{ project.title }}</h3>
             <p class="card-text">{{ project.description }}</p>

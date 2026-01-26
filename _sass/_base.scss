@@ -197,6 +197,24 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
+  .project-img-wide {
+    width: 100%;
+    min-height: 300px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+
+    img {
+      max-width: 95%;
+      max-height: 95%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
   .card-title {
     color: var(--global-text-color);
   }
