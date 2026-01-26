@@ -8,6 +8,7 @@ category: work
 related_publications: false
 start_date: 2024-01-01
 end_date: 2026-02-28
+organization: Narnia Labs
 ---
 
 ## Project Overview

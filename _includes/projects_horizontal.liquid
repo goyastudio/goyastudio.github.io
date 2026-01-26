@@ -1,39 +1,45 @@
 <div class="col mb-4">
   <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
     <div class="card h-100 hoverable">
-      <div class="row no-gutters">
+      <div class="card-body pb-2">
+        <h3 class="card-title mb-3">{{ project.title }}</h3>
+      </div>
+      <div class="row no-gutters px-3 pb-3">
         {% if project.img %}
-          <div class="col-md-4">
+          <div class="col-3">
             <div class="project-img-square">
-              {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 800px, 90vw" alt="project thumbnail" %}
+              {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 156px, 25vw" alt="project thumbnail" %}
             </div>
           </div>
         {% endif %}
-        <div class="{% if project.img %}col-md-8{% else %}col-md-12{% endif %}">
-          <div class="card-body">
-            <h3 class="card-title">{{ project.title }}</h3>
-            <p class="card-text">{{ project.description }}</p>
-            {% if project.start_date and project.end_date %}
-              <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.5rem;">
-                <i class="fa-regular fa-calendar"></i>
-                {{ project.start_date | date: "%Y.%m" }} - {{ project.end_date | date: "%Y.%m" }}
-              </p>
-            {% endif %}
-            <div class="row ml-1 mr-1 p-0">
-              {% if project.github %}
-                <div class="github-icon">
-                  <div class="icon" data-toggle="tooltip" title="Code Repository">
-                    <a href="{{ project.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
-                  </div>
-                  {% if project.github_stars %}
-                    <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-                      <i class="fa-solid fa-star"></i>
-                      <span id="{{ project.github_stars }}-stars"></span>
-                    </span>
-                  {% endif %}
+        <div class="{% if project.img %}col-9 pl-3{% else %}col-12{% endif %}">
+          <p class="card-text">{{ project.description }}</p>
+          {% if project.organization %}
+            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-building"></i>
+              {{ project.organization }}
+            </p>
+          {% endif %}
+          {% if project.start_date and project.end_date %}
+            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+              <i class="fa-regular fa-calendar"></i>
+              {{ project.start_date | date: "%Y.%m" }} - {{ project.end_date | date: "%Y.%m" }}
+            </p>
+          {% endif %}
+          <div class="row ml-1 mr-1 p-0">
+            {% if project.github %}
+              <div class="github-icon">
+                <div class="icon" data-toggle="tooltip" title="Code Repository">
+                  <a href="{{ project.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
                 </div>
-              {% endif %}
-            </div>
+                {% if project.github_stars %}
+                  <span class="stars" data-toggle="tooltip" title="GitHub Stars">
+                    <i class="fa-solid fa-star"></i>
+                    <span id="{{ project.github_stars }}-stars"></span>
+                  </span>
+                {% endif %}
+              </div>
+            {% endif %}
           </div>
         </div>
       </div>

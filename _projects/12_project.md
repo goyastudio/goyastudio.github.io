@@ -8,6 +8,7 @@ category: work
 related_publications: false
 start_date: 2021-05-01
 end_date: 2022-05-31
+organization: Smart Design Lab, KAIST
 ---
 
 ## Project Overview
