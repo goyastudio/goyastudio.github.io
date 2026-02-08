@@ -13,7 +13,7 @@ profile:
     <p>193, Munji-ro, Yuseong-gu, </p> 
     <p>Daejeon, Republic of Korea</p>
     
-news: true # includes a list of news items
+news: false # disabled - using latest updates instead
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
