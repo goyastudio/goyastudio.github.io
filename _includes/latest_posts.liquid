@@ -1,41 +1,77 @@
 <div class="news">
-  {% if site.latest_posts != blank %}
-    {% assign latest_posts_size = site.posts | size %}
+  {% comment %} Collect all updates (projects + publications) {% endcomment %}
+  {% assign all_updates = "" | split: "" %}
+
+  {% comment %} Add projects (sorted by end_date) {% endcomment %}
+  {% for project in site.projects %}
+    {% if project.end_date %}
+      {% capture update_item %}{{ project.end_date | date: "%Y%m%d" }}|project|{{ project.title }}|{{ project.url }}{% endcapture %}
+      {% assign all_updates = all_updates | push: update_item %}
+    {% endif %}
+  {% endfor %}
+
+  {% comment %} Add publications from _data/publications.yml {% endcomment %}
+  {% for pub in site.data.publications %}
+    {% capture update_item %}{{ pub.date | date: "%Y%m%d" }}|publication|{{ pub.title }}|{{ pub.url }}{% endcapture %}
+    {% assign all_updates = all_updates | push: update_item %}
+  {% endfor %}
+
+  {% comment %} Sort all updates by date (descending) {% endcomment %}
+  {% assign sorted_updates = all_updates | sort | reverse %}
+
+  {% assign updates_size = sorted_updates | size %}
+
+  {% if updates_size > 0 %}
     <div
       class="table-responsive"
-      {% if site.latest_posts.scrollable and latest_posts_size > 3 %}
+      {% if site.latest_posts.scrollable and updates_size > 3 %}
         style="max-height: 60vw"
       {% endif %}
     >
       <table class="table table-sm table-borderless">
-        {% assign latest_posts = site.posts %}
         {% if site.latest_posts.limit %}
-          {% assign latest_posts_limit = site.latest_posts.limit %}
+          {% assign updates_limit = site.latest_posts.limit %}
         {% else %}
-          {% assign latest_posts_limit = latest_posts_size %}
+          {% assign updates_limit = updates_size %}
         {% endif %}
-        {% for item in latest_posts limit: latest_posts_limit %}
+        {% for update in sorted_updates limit: updates_limit %}
+          {% assign parts = update | split: "|" %}
+          {% assign update_date = parts[0] %}
+          {% assign update_type = parts[1] %}
+          {% assign update_title = parts[2] %}
+          {% assign update_url = parts[3] %}
           <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            <th scope="row" style="width: 20%">
+              {% assign year = update_date | slice: 0, 4 %}
+              {% assign month = update_date | slice: 4, 2 %}
+              {% case month %}
+                {% when "01" %}Jan
+                {% when "02" %}Feb
+                {% when "03" %}Mar
+                {% when "04" %}Apr
+                {% when "05" %}May
+                {% when "06" %}Jun
+                {% when "07" %}Jul
+                {% when "08" %}Aug
+                {% when "09" %}Sep
+                {% when "10" %}Oct
+                {% when "11" %}Nov
+                {% when "12" %}Dec
+              {% endcase %} {{ year }}
+            </th>
             <td>
-              {% if item.redirect == blank %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-              {% elsif item.redirect contains '://' %}
-                <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a>
-                <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
-                    class="icon_svg-stroke"
-                    stroke="#999"
-                    stroke-width="1.5"
-                    fill="none"
-                    fill-rule="evenodd"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
+              {% if update_type == "project" %}
+                <span class="badge badge-primary mr-1" style="font-size: 0.7em;">Project</span>
+              {% else %}
+                <span class="badge badge-success mr-1" style="font-size: 0.7em;">Publication</span>
+              {% endif %}
+              {% if update_url contains "://" %}
+                <a class="news-title" href="{{ update_url }}" target="_blank">{{ update_title }}</a>
+                <svg width="1rem" height="1rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               {% else %}
-                <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
+                <a class="news-title" href="{{ update_url | relative_url }}">{{ update_title }}</a>
               {% endif %}
             </td>
           </tr>
@@ -43,6 +79,6 @@
       </table>
     </div>
   {% else %}
-    <p>No posts so far...</p>
+    <p>No updates so far...</p>
   {% endif %}
 </div>

@@ -1,20 +1,23 @@
 ---
-layout: default
+layout: none
 permalink: /blog/
 title: blog
 nav: true
 nav_order: 1
-pagination:
-  enabled: true
-  collection: posts
-  permalink: /page/:num/
-  per_page: 5
-  sort_field: date
-  sort_reverse: true
-  trail:
-    before: 1 # The number of links before the current page
-    after: 3 # The number of links after the current page
+redirect: https://brunch.co.kr/@dydals5624
 ---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=https://brunch.co.kr/@dydals5624">
+  <link rel="canonical" href="https://brunch.co.kr/@dydals5624">
+  <script>window.location.href = "https://brunch.co.kr/@dydals5624";</script>
+</head>
+<body>
+  <p>Redirecting to <a href="https://brunch.co.kr/@dydals5624">https://brunch.co.kr/@dydals5624</a>...</p>
+</body>
+</html>
 
 <div class="post">
 

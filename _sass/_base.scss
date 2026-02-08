@@ -185,12 +185,31 @@ ul.task-list input[type="checkbox"] {
     background-color: white;
     overflow: hidden;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    figure {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    picture {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center center;
+      object-fit: contain;
     }
   }
 
