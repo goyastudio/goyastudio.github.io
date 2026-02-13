@@ -336,12 +336,7 @@
       {% endif %}
     {% endif %}
 
-    {% if entry.award %}
-      <!-- Hidden Award block -->
-      <div class="award hidden d-print-inline">
-        <p>{{ entry.award | markdownify }}</p>
-      </div>
-    {% endif %}
+    {% comment %} Award block removed - badge only {% endcomment %}
 
     {% if entry.abstract %}
       <!-- Hidden abstract block -->
