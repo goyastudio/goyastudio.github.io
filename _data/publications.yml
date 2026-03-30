@@ -1,6 +1,11 @@
 # Publications list for latest updates
 # Sync this with _bibliography/papers.bib when adding new publications
 
+- title: "Three-dimensional Geometric Augmentation Guided by Engineering Uncertainty"
+  year: 2026
+  date: 2026-03-30
+  url: "https://arxiv.org/abs/2506.12326"
+
 - title: "Three-dimensional Deep Shape Optimization with a Limited Dataset"
   year: 2025
   date: 2025-06-01
