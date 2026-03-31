@@ -793,6 +793,12 @@ footer.sticky-bottom {
         }
       }
 
+      .journal-info {
+        font-size: 0.85em;
+        font-weight: 500;
+        color: var(--global-theme-color);
+      }
+
       .author {
         a {
           border-bottom: 1px dashed var(--global-theme-color);
