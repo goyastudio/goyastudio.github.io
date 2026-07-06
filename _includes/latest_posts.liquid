@@ -2,10 +2,15 @@
   {% comment %} Collect all updates (projects + publications) {% endcomment %}
   {% assign all_updates = "" | split: "" %}
 
-  {% comment %} Add projects (sorted by end_date) {% endcomment %}
+  {% comment %} Add projects (uses update_date if set, else end_date) {% endcomment %}
   {% for project in site.projects %}
-    {% if project.end_date %}
-      {% capture update_item %}{{ project.end_date | date: "%Y%m%d" }}|project|{{ project.title }}|{{ project.url }}{% endcapture %}
+    {% if project.update_date %}
+      {% assign project_update_date = project.update_date %}
+    {% else %}
+      {% assign project_update_date = project.end_date %}
+    {% endif %}
+    {% if project_update_date %}
+      {% capture update_item %}{{ project_update_date | date: "%Y%m%d" }}|project|{{ project.title }}|{{ project.url }}{% endcapture %}
       {% assign all_updates = all_updates | push: update_item %}
     {% endif %}
   {% endfor %}
