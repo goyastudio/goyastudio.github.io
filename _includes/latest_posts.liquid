@@ -21,6 +21,12 @@
     {% assign all_updates = all_updates | push: update_item %}
   {% endfor %}
 
+  {% comment %} Add awards from _data/awards.yml {% endcomment %}
+  {% for award in site.data.awards %}
+    {% capture update_item %}{{ award.date | date: "%Y%m%d" }}|award|{{ award.title }}|{{ award.url }}{% endcapture %}
+    {% assign all_updates = all_updates | push: update_item %}
+  {% endfor %}
+
   {% comment %} Sort all updates by date (descending) {% endcomment %}
   {% assign sorted_updates = all_updates | sort | reverse %}
 
@@ -67,6 +73,8 @@
             <td>
               {% if update_type == "project" %}
                 <span class="badge badge-primary mr-1" style="font-size: 0.7em;">Project</span>
+              {% elsif update_type == "award" %}
+                <span class="badge badge-warning mr-1" style="font-size: 0.7em;">Award</span>
               {% else %}
                 <span class="badge badge-success mr-1" style="font-size: 0.7em;">Publication</span>
               {% endif %}

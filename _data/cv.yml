@@ -46,6 +46,9 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2026
+      items:
+        - Bronze Prize, Student Competition (KSME CAE and Applied Mechanics Division Spring Conference)
     - year: 2023
       items:
         - Outstanding Paper Award (KSME)
