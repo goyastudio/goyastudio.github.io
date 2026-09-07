@@ -47,7 +47,24 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{% if entry.award %}<i class="fa-solid fa-trophy award-icon"></i> {% endif %}{{ entry.title }}</div>
+    <div class="title">
+      {%- if entry.patent_status -%}
+        {%- assign _ps = entry.patent_status | downcase -%}
+        {%- if _ps == 'registered' -%}
+          {%- assign patent_badge_class = 'badge-success' -%}
+        {%- elsif _ps == 'published' -%}
+          {%- assign patent_badge_class = 'badge-warning' -%}
+        {%- elsif _ps == 'pct' -%}
+          {%- assign patent_badge_class = 'badge-primary' -%}
+        {%- elsif _ps == 'filed' -%}
+          {%- assign patent_badge_class = 'badge-info' -%}
+        {%- else -%}
+          {%- assign patent_badge_class = 'badge-secondary' -%}
+        {%- endif -%}
+        <span class="badge {{ patent_badge_class }} mr-2" style="font-size: 0.7em; vertical-align: middle;">{{ entry.patent_status }}</span>
+      {%- endif -%}
+      {% if entry.award %}<i class="fa-solid fa-trophy award-icon"></i> {% endif %}{{ entry.title }}
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
