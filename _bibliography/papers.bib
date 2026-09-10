@@ -72,6 +72,10 @@
   journal={Advanced Engineering Informatics},
   journal_info={IF 11.5 · JCR Q1},
   year={2026},
+  pdf={zeroshotrib_aei_2026.pdf},
+  video={assets/video/zeroshotrib_aei_2026.mp4},
+  preview={zeroshotrib_aei_2026_framework.png},
+  abstract={Natural load-bearing patterns such as leaf venation, trabecular bone, and spider webs achieve high stiffness per unit mass, yet classical topology optimizers rarely reach such geometries, and few let engineers express structural design intent through natural language. This work treats a frozen text-to-image diffusion model as a training-free source of design knowledge and distills it into the physics loop of density-based topology optimization via score distillation sampling, so that a text prompt becomes an explicit, machine-interpretable representation of engineer intent. The prompt-induced generative gradient and the finite element sensitivity are combined at every iteration, letting physics decide which prompt-induced features survive. In 245 primary SDS runs spanning four geometric domains and two physics regimes, 38 of 49 prompt–domain combinations achieved statistically significant compliance reductions (up to −31.5% mechanical and −23.0% thermoelastic), outperforming gradient-based baselines. Cross-domain morphological analysis identifies a recurring structural signature of improvement: in most domains the generative prior suppresses dead-end branches in the rib skeleton, with endpoint–compliance correlation r = +0.56 to +0.99. A Heaviside projection with β-continuation resolves a pronounced intermediate-density tendency in this diffusion–physics coupling (42.6% to < 3%), and an automated skeleton-based pipeline converts optimized density fields into candidate geometry ready for computer-aided design. By retargeting the generative prior across domains, loading conditions, and physics objectives through a change of text prompt, with each new problem's physics setup specified separately, the framework uses a pretrained generative model as a reusable, training-free prior for engineering design.},
   selected={true},
   pubtype={intl_journal},
 }
