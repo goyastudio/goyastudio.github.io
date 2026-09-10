@@ -1,0 +1,131 @@
+{%- assign a = site.data.announcement -%}
+{%- if a and a.enabled -%}
+  <div id="site-announcement" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="site-announcement-title">
+    <div class="site-announcement__backdrop" data-close="1"></div>
+    <div class="site-announcement__card" role="document">
+      <button type="button" class="site-announcement__close" data-close="1" aria-label="Close announcement">&times;</button>
+      {%- if a.badge %}<div class="site-announcement__badge">{{ a.badge }}</div>{%- endif %}
+      {%- if a.title %}<h3 id="site-announcement-title" class="site-announcement__title">{{ a.title }}</h3>{%- endif %}
+      {%- if a.message %}<div class="site-announcement__msg">{{ a.message }}</div>{%- endif %}
+      <div class="site-announcement__actions">
+        {%- if a.link and a.link_text %}
+          <a class="site-announcement__cta" href="{{ a.link | relative_url }}" data-close="1">{{ a.link_text }}</a>
+        {%- endif %}
+        <button type="button" class="site-announcement__dismiss" data-dismiss="1">Don't show again</button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #site-announcement {
+      position: fixed; inset: 0; z-index: 2000;
+      display: flex; align-items: center; justify-content: center;
+      padding: 1rem;
+    }
+    #site-announcement[hidden] { display: none !important; }
+    .site-announcement__backdrop {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(2px);
+    }
+    .site-announcement__card {
+      position: relative;
+      max-width: 460px; width: 100%;
+      background: var(--global-card-bg-color, #fff);
+      color: var(--global-text-color, #222);
+      border-radius: 12px;
+      padding: 1.75rem 1.5rem 1.25rem 1.5rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .site-announcement__close {
+      position: absolute; top: 0.4rem; right: 0.6rem;
+      width: 2rem; height: 2rem;
+      border: none; background: transparent;
+      font-size: 1.6rem; line-height: 1;
+      color: var(--global-text-color-light, #888);
+      cursor: pointer; padding: 0;
+    }
+    .site-announcement__close:hover { color: var(--global-text-color, #222); }
+    .site-announcement__badge {
+      display: inline-block;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: var(--global-theme-color, #6a00ff);
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+    .site-announcement__title {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.15rem; font-weight: 700;
+    }
+    .site-announcement__msg { margin-bottom: 1rem; }
+    .site-announcement__msg em { font-style: italic; }
+    .site-announcement__actions {
+      display: flex; flex-wrap: wrap; gap: 0.6rem;
+      align-items: center; justify-content: flex-end;
+    }
+    .site-announcement__cta {
+      display: inline-block;
+      padding: 0.4rem 0.9rem;
+      background: var(--global-theme-color, #6a00ff);
+      color: #fff !important;
+      border-radius: 6px;
+      text-decoration: none !important;
+      font-weight: 500;
+    }
+    .site-announcement__cta:hover { filter: brightness(0.92); }
+    .site-announcement__dismiss {
+      background: none; border: none;
+      color: var(--global-text-color-light, #888);
+      font-size: 0.85rem; cursor: pointer;
+      padding: 0.4rem 0.4rem;
+      text-decoration: underline;
+    }
+    .site-announcement__dismiss:hover { color: var(--global-text-color, #222); }
+  </style>
+
+  <script>
+    (function () {
+      var el = document.getElementById('site-announcement');
+      if (!el) return;
+
+      var END_DATE = '{{ a.end_date }}';
+      var STORAGE_KEY = '{{ a.storage_key | default: "site-announcement-dismissed" }}';
+
+      // Auto-expire on the viewer's clock.
+      if (END_DATE) {
+        var end = new Date(END_DATE + 'T23:59:59');
+        if (!isNaN(end.getTime()) && Date.now() > end.getTime()) return;
+      }
+
+      // Respect previous dismissal.
+      try {
+        if (localStorage.getItem(STORAGE_KEY) === '1') return;
+      } catch (e) { /* private mode etc. — just show once per view */ }
+
+      function close(persist) {
+        el.hidden = true;
+        el.setAttribute('aria-hidden', 'true');
+        if (persist) {
+          try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+        }
+      }
+
+      el.hidden = false;
+      el.setAttribute('aria-hidden', 'false');
+
+      el.addEventListener('click', function (ev) {
+        var t = ev.target;
+        if (t.getAttribute('data-dismiss') === '1') return close(true);
+        if (t.getAttribute('data-close') === '1') return close(false);
+      });
+      document.addEventListener('keydown', function (ev) {
+        if (ev.key === 'Escape' && !el.hidden) close(false);
+      });
+    })();
+  </script>
+{%- endif -%}

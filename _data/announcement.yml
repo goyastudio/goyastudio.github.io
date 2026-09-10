@@ -1,0 +1,20 @@
+# Sitewide announcement popup
+# Set enabled: false to hide immediately. The popup also auto-hides once
+# today's date (viewer's clock) passes end_date.
+
+enabled: true
+start_date: 2026-09-10
+end_date: 2026-10-10
+
+badge: New paper
+title: "Zero-Shot Rib Design"
+message: >
+  "Merging Training-Free Generative Prior with Topology Optimization"
+  has been accepted for publication in <em>Advanced Engineering
+  Informatics</em> (IF 11.5 · JCR Q1).
+link: "/publications/"
+link_text: "See publications"
+
+# Bump storage_key when you want previously-dismissed viewers to see the
+# popup again (e.g. new announcement content reuses this file).
+storage_key: "announce-2026-zerorib"

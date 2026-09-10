@@ -73,5 +73,9 @@
     {% include scripts/jekyll_tabs.liquid %}
     {% include scripts/back_to_top.liquid %}
     {% include scripts/search.liquid %}
+
+    {% if page.layout == 'about' %}
+      {% include announcement.liquid %}
+    {% endif %}
   </body>
 </html>
