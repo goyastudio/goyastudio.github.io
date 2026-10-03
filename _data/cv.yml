@@ -62,13 +62,15 @@
 - title: Academic Interests
   type: nested_list
   contents:
+    - title: Fusion of Physics Integrity and AI Creativity
+      items:
+        - Foundation models as oracles under geometric and physical constraints
+        - Training-free guidance of pretrained generative models
     - title: AI-driven Design Optimization
       items:
-        - Generative Model
-        - Optimization Algorithm
-    - title: Fusion of Phisics Integrity and AI Creativity
-      items:
-        - Design Optimization with Generative Model
+        - Topology optimization guided by diffusion priors
+        - Shape–mechanics co-design with flow-matching models
+        - LLM-based multi-agent systems for multidisciplinary co-design
 
 - title: Other Interests
   type: list
