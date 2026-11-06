@@ -9,6 +9,35 @@ _styles: >
   .pub-section {
     margin-bottom: 2.5rem;
   }
+  .pub-section .links a.btn {
+    color: var(--global-text-color);
+    cursor: pointer;
+  }
+  .pub-section .links a.btn:hover {
+    color: var(--global-theme-color);
+  }
+  .pub-section div.abstract.hidden,
+  .pub-section div.video-embed.hidden {
+    max-height: 0;
+    overflow: hidden;
+    border: dashed 1px transparent;
+    transition: all 0.15s ease;
+  }
+  .pub-section div.abstract.hidden {
+    font-size: 0.875rem;
+    text-align: justify;
+  }
+  .pub-section div.abstract.hidden p {
+    line-height: 1.4em;
+    margin: 10px;
+  }
+  .pub-section div.abstract.hidden.open,
+  .pub-section div.video-embed.hidden.open {
+    max-height: 100em;
+  }
+  .pub-section div.abstract.hidden.open {
+    border-color: var(--global-text-color);
+  }
   .pub-section h2 {
     font-size: 1.3rem;
     font-weight: 600;
@@ -126,23 +155,18 @@ _styles: >
 </div>
 
 <div class="pub-section">
+<h2>In Preparation</h2>
+{% bibliography --group_by none --query @*[pubtype=under_review]* %}
+</div>
+
+<div class="pub-section">
 <h2>International Journal</h2>
 {% bibliography --query @*[pubtype=intl_journal]* %}
 </div>
 
 <div class="pub-section">
-<h2>Under Review</h2>
-{% bibliography --group_by none --query @*[pubtype=under_review]* %}
-</div>
-
-<div class="pub-section">
 <h2>International Conference</h2>
 {% bibliography --query @*[pubtype=intl_conf]* %}
-</div>
-
-<div class="pub-section">
-<h2>Domestic Journal</h2>
-{% bibliography --query @*[pubtype=domestic_journal]* %}
 </div>
 
 <div class="pub-section">
