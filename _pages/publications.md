@@ -102,6 +102,7 @@ _styles: >
   on values containing spaces, so these are hardcoded. Update when a new
   paper is added to one of these journals in _bibliography/papers.bib.
 -->
+
 {% assign jmd_count = 1 %}
 {% assign eaai_count = 2 %}
 {% assign advei_count = 1 %}

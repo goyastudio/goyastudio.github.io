@@ -61,10 +61,12 @@ Developed a prediction system that forecasts vehicle kinematic response using on
 ### Key Technical Components
 
 1. **Automated Trajectory Extraction**
+
    - Implemented object detection algorithms to extract vehicle motion from crash test videos
    - Automated conversion of visual data into quantitative trajectory measurements
 
 2. **Design-Response Correlation Analysis**
+
    - Analyzed relationships between vehicle design variables (geometry, structure, weight distribution) and crash kinematics
    - Identified key design parameters that influence crash response
 
