@@ -27,6 +27,7 @@ Developed an AI system that automates the 3D design of automotive part covers (r
 ## My Role
 
 **Project Manager, Narnia Labs**
+
 - Led problem definition and scoping in collaboration with the client team
 - Owned client-facing communication and delivery milestones throughout the engagement
 - Drove hands-on technical work on the rule-encoded generative AI pipeline that produces CAD models and drawings end-to-end

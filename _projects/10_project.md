@@ -18,6 +18,7 @@ This project developed a generative AI model for optimizing the design of Molded
 ## My Role
 
 **Project Manager & Technical Lead**
+
 - Defined core problem statements and project scope
 - Led technical implementation and hands-on development
 - Coordinated cross-functional collaboration between AI research team and manufacturing engineers
@@ -35,12 +36,14 @@ This project developed a generative AI model for optimizing the design of Molded
 </div>
 
 ### Performance Improvements
+
 - **19% increase in fracture strength** while maintaining the same component weight
 - **50x increase in design alternatives**: Generated and evaluated ~1,000 design options (vs. ~20 in traditional workflows)
 - **Design review time reduced to ~30 seconds** through AI-powered performance prediction
 - **75% reduction in design iteration cycles** expected for future projects
 
 ### Technical Innovation
+
 - Developed hybrid AI system combining **generative AI** for design synthesis and **predictive AI** for performance analysis
 - Delivered designs in **editable CAD format** fully compatible with injection molding manufacturing constraints
 - Established end-to-end workflow from AI design generation to physical prototype validation

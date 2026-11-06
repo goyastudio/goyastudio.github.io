@@ -18,6 +18,7 @@ This project developed an AI-based prediction system for vehicle kinematic respo
 ## My Role
 
 **Technical Implementation Lead**
+
 - Implemented machine learning models for crash kinematics prediction
 - Developed vehicle trajectory extraction pipeline using object detection algorithms
 - Conducted correlation analysis between design parameters and crash response
@@ -76,6 +77,7 @@ Developed a prediction system that forecasts vehicle kinematic response using on
 ### Early Design Phase Integration
 
 The system enables crash performance evaluation during early design stages when:
+
 - Physical prototypes don't yet exist
 - Design changes can be implemented at minimal cost
 - Multiple design alternatives can be quickly evaluated
@@ -83,6 +85,7 @@ The system enables crash performance evaluation during early design stages when:
 ### Quantitative Decision Making
 
 Replaced subjective judgment with objective, data-driven metrics for:
+
 - Vehicle kinematic response classification
 - Design optimization guidance
 - Safety performance prediction

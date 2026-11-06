@@ -27,6 +27,7 @@ Developed a deep-learning framework that automates the design of vibration-test 
 ## My Role
 
 **AI Researcher, Narnia Labs**
+
 - Individual contributor on the hands-on implementation of the assembly-generation and vibration-prediction models
 - Contributed to integrating the models into the design-engineer-facing software platform
 

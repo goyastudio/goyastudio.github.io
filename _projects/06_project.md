@@ -27,6 +27,7 @@ Developed a generative AI workflow to lightweight and cost-reduce structural com
 ## My Role
 
 **AI Researcher, Narnia Labs**
+
 - Individual contributor on the implementation code for the parametric-design and structural-verification pipeline
 - Built and tuned the generation–evaluation loop that surfaces the mass-vs-stiffness trade-off
 

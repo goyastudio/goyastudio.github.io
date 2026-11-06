@@ -6,6 +6,7 @@ nav: true
 nav_order: 1
 redirect: https://brunch.co.kr/@dydals5624
 ---
+
 <!DOCTYPE html>
 <html>
 <head>

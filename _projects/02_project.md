@@ -27,6 +27,7 @@ Developed an end-to-end AI platform for designing seat ventilation ducts in mobi
 ## My Role
 
 **Project Manager, Narnia Labs**
+
 - Led problem definition and scoping in collaboration with the client team
 - Owned client-facing communication and delivery milestones throughout the engagement
 - Drove hands-on technical work on the generative + predictive AI platform for pressure-drop-optimal duct design

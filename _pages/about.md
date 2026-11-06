@@ -12,11 +12,12 @@ profile:
     <p>F431, Faculty Building, </p> 
     <p>193, Munji-ro, Yuseong-gu, </p> 
     <p>Daejeon, Republic of Korea</p>
-    
+
 news: false # disabled - using latest updates instead
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+
 I am a Ph.D. student at [KAIST](https://www.kaist.ac.kr/en/), advised by Prof. [Namwoo Kang](https://www.smartdesignlab.org/people/professor). My research asks how **foundation models can be made useful for engineering design**. Generative models now propose plausible forms in almost any modality, but an engineering design must also stay within its design domain, carry load, and remain manufacturable. Rather than retraining these models on more engineering data, I treat them as **oracles to be queried under geometric and physical constraints**, so that what they generate is engineering-valid, not just visually plausible.
 
 I apply this idea across image, geometry, and language models, from guiding topology optimization with diffusion models to co-designing shape and mechanics with flow-matching samplers. Because none of this updates model weights, a new domain or objective only requires a new specification and set of constraints. See [research](/research/) for details.

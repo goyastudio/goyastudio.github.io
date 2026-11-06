@@ -4,9 +4,15 @@
     <div class="site-announcement__backdrop" data-close="1"></div>
     <div class="site-announcement__card" role="document">
       <button type="button" class="site-announcement__close" data-close="1" aria-label="Close announcement">&times;</button>
-      {%- if a.badge %}<div class="site-announcement__badge">{{ a.badge }}</div>{%- endif %}
-      {%- if a.title %}<h3 id="site-announcement-title" class="site-announcement__title">{{ a.title }}</h3>{%- endif %}
-      {%- if a.message %}<div class="site-announcement__msg">{{ a.message }}</div>{%- endif %}
+      {%- if a.badge %}
+        <div class="site-announcement__badge">{{ a.badge }}</div>
+      {%- endif %}
+      {%- if a.title %}
+        <h3 id="site-announcement-title" class="site-announcement__title">{{ a.title }}</h3>
+      {%- endif %}
+      {%- if a.message %}
+        <div class="site-announcement__msg">{{ a.message }}</div>
+      {%- endif %}
       <div class="site-announcement__actions">
         {%- if a.link and a.link_text %}
           <a class="site-announcement__cta" href="{{ a.link | relative_url }}" data-close="1">{{ a.link_text }}</a>
@@ -18,39 +24,57 @@
 
   <style>
     #site-announcement {
-      position: fixed; inset: 0; z-index: 2000;
-      display: flex; align-items: center; justify-content: center;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 1rem;
     }
-    #site-announcement[hidden] { display: none !important; }
+    #site-announcement[hidden] {
+      display: none !important;
+    }
     .site-announcement__backdrop {
-      position: absolute; inset: 0;
-      background: rgba(0,0,0,0.45);
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
       backdrop-filter: blur(2px);
     }
     .site-announcement__card {
       position: relative;
-      max-width: 460px; width: 100%;
+      max-width: 460px;
+      width: 100%;
       background: var(--global-card-bg-color, #fff);
       color: var(--global-text-color, #222);
       border-radius: 12px;
       padding: 1.75rem 1.5rem 1.25rem 1.5rem;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
       font-size: 0.95rem;
       line-height: 1.5;
     }
     .site-announcement__close {
-      position: absolute; top: 0.4rem; right: 0.6rem;
-      width: 2rem; height: 2rem;
-      border: none; background: transparent;
-      font-size: 1.6rem; line-height: 1;
+      position: absolute;
+      top: 0.4rem;
+      right: 0.6rem;
+      width: 2rem;
+      height: 2rem;
+      border: none;
+      background: transparent;
+      font-size: 1.6rem;
+      line-height: 1;
       color: var(--global-text-color-light, #888);
-      cursor: pointer; padding: 0;
+      cursor: pointer;
+      padding: 0;
     }
-    .site-announcement__close:hover { color: var(--global-text-color, #222); }
+    .site-announcement__close:hover {
+      color: var(--global-text-color, #222);
+    }
     .site-announcement__badge {
       display: inline-block;
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       padding: 0.2rem 0.55rem;
       border-radius: 999px;
@@ -60,13 +84,21 @@
     }
     .site-announcement__title {
       margin: 0 0 0.5rem 0;
-      font-size: 1.15rem; font-weight: 700;
+      font-size: 1.15rem;
+      font-weight: 700;
     }
-    .site-announcement__msg { margin-bottom: 1rem; }
-    .site-announcement__msg em { font-style: italic; }
+    .site-announcement__msg {
+      margin-bottom: 1rem;
+    }
+    .site-announcement__msg em {
+      font-style: italic;
+    }
     .site-announcement__actions {
-      display: flex; flex-wrap: wrap; gap: 0.6rem;
-      align-items: center; justify-content: flex-end;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      justify-content: flex-end;
     }
     .site-announcement__cta {
       display: inline-block;
@@ -77,15 +109,21 @@
       text-decoration: none !important;
       font-weight: 500;
     }
-    .site-announcement__cta:hover { filter: brightness(0.92); }
+    .site-announcement__cta:hover {
+      filter: brightness(0.92);
+    }
     .site-announcement__dismiss {
-      background: none; border: none;
+      background: none;
+      border: none;
       color: var(--global-text-color-light, #888);
-      font-size: 0.85rem; cursor: pointer;
+      font-size: 0.85rem;
+      cursor: pointer;
       padding: 0.4rem 0.4rem;
       text-decoration: underline;
     }
-    .site-announcement__dismiss:hover { color: var(--global-text-color, #222); }
+    .site-announcement__dismiss:hover {
+      color: var(--global-text-color, #222);
+    }
   </style>
 
   <script>
@@ -105,13 +143,17 @@
       // Respect previous dismissal.
       try {
         if (localStorage.getItem(STORAGE_KEY) === '1') return;
-      } catch (e) { /* private mode etc. — just show once per view */ }
+      } catch (e) {
+        /* private mode etc. — just show once per view */
+      }
 
       function close(persist) {
         el.hidden = true;
         el.setAttribute('aria-hidden', 'true');
         if (persist) {
-          try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+          try {
+            localStorage.setItem(STORAGE_KEY, '1');
+          } catch (e) {}
         }
       }
 

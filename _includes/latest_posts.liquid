@@ -1,6 +1,6 @@
 <div class="news">
   {% comment %} Collect all updates (projects + publications) {% endcomment %}
-  {% assign all_updates = "" | split: "" %}
+  {% assign all_updates = '' | split: '' %}
 
   {% comment %} Add projects (uses update_date if set, else end_date) {% endcomment %}
   {% for project in site.projects %}
@@ -46,7 +46,7 @@
           {% assign updates_limit = updates_size %}
         {% endif %}
         {% for update in sorted_updates limit: updates_limit %}
-          {% assign parts = update | split: "|" %}
+          {% assign parts = update | split: '|' %}
           {% assign update_date = parts[0] %}
           {% assign update_type = parts[1] %}
           {% assign update_title = parts[2] %}
@@ -56,29 +56,42 @@
               {% assign year = update_date | slice: 0, 4 %}
               {% assign month = update_date | slice: 4, 2 %}
               {% case month %}
-                {% when "01" %}Jan
-                {% when "02" %}Feb
-                {% when "03" %}Mar
-                {% when "04" %}Apr
-                {% when "05" %}May
-                {% when "06" %}Jun
-                {% when "07" %}Jul
-                {% when "08" %}Aug
-                {% when "09" %}Sep
-                {% when "10" %}Oct
-                {% when "11" %}Nov
-                {% when "12" %}Dec
-              {% endcase %} {{ year }}
+                {% when '01' -%}
+                  Jan
+                {% when '02' -%}
+                  Feb
+                {% when '03' -%}
+                  Mar
+                {% when '04' -%}
+                  Apr
+                {% when '05' -%}
+                  May
+                {% when '06' -%}
+                  Jun
+                {% when '07' -%}
+                  Jul
+                {% when '08' -%}
+                  Aug
+                {% when '09' -%}
+                  Sep
+                {% when '10' -%}
+                  Oct
+                {% when '11' -%}
+                  Nov
+                {% when '12' -%}
+                  Dec
+              {% endcase %}
+              {{ year }}
             </th>
             <td>
-              {% if update_type == "project" %}
+              {% if update_type == 'project' %}
                 <span class="badge badge-primary mr-1" style="font-size: 0.7em;">Project</span>
-              {% elsif update_type == "award" %}
+              {% elsif update_type == 'award' %}
                 <span class="badge badge-warning mr-1" style="font-size: 0.7em;">Award</span>
               {% else %}
                 <span class="badge badge-success mr-1" style="font-size: 0.7em;">Publication</span>
               {% endif %}
-              {% if update_url contains "://" %}
+              {% if update_url contains '://' %}
                 <a class="news-title" href="{{ update_url }}" target="_blank">{{ update_title }}</a>
                 <svg width="1rem" height="1rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>

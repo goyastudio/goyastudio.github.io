@@ -18,6 +18,7 @@ This project developed an automated facility layout optimization system using ge
 ## My Role
 
 **Algorithm Developer**
+
 - Designed and implemented core optimization algorithms for multi-layer facility layout
 - Developed generative design methodology considering process efficiency and safety constraints
 - Created automated layout generation system that surpasses traditional experience-based approaches
@@ -43,6 +44,7 @@ Facility layout design in industrial plants has traditionally relied on the expe
 ## Technical Approach
 
 ### Optimization Objectives
+
 1. **Minimize plant footprint area**: Reduce land use and construction costs
 2. **Minimize total pipe length**: Reduce material costs and pressure losses
 3. **Satisfy safety and operational constraints**: Maintain required clearances, access paths, and process flow requirements

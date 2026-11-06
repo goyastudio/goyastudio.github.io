@@ -27,6 +27,7 @@ Developed a predictive AI framework that replaces computational fluid dynamics (
 ## My Role
 
 **Project Manager, Narnia Labs**
+
 - Led problem definition and scoping in collaboration with the client team
 - Owned client-facing communication and delivery milestones throughout the engagement
 - Drove hands-on technical work on the physics-constrained predictive AI framework for real-time airflow and direction estimation

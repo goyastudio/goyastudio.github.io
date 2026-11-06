@@ -63,7 +63,8 @@
         {%- endif -%}
         <span class="badge {{ patent_badge_class }} mr-2" style="font-size: 0.7em; vertical-align: middle;">{{ entry.patent_status }}</span>
       {%- endif -%}
-      {% if entry.award %}<i class="fa-solid fa-trophy award-icon"></i> {% endif %}{{ entry.title }}
+      {% if entry.award %}<i class="fa-solid fa-trophy award-icon"></i> {% endif -%}
+      {{- entry.title }}
     </div>
     <!-- Author -->
     <div class="author">
@@ -202,7 +203,12 @@
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.abstract %}
-        <a class="abstract btn btn-sm z-depth-0" role="button" onclick="var el=this.closest('.col-sm-8, .col-sm-10').querySelector('div.abstract.hidden');if(el)el.classList.toggle('open');">Abs</a>
+        <a
+          class="abstract btn btn-sm z-depth-0"
+          role="button"
+          onclick="var el=this.closest('.col-sm-8, .col-sm-10').querySelector('div.abstract.hidden');if(el)el.classList.toggle('open');"
+          >Abs</a
+        >
       {% endif %}
       {% if entry.doi %}
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
@@ -235,7 +241,12 @@
         {% endif %}
       {% endif %}
       {% if entry.video and site.enable_video_embedding %}
-        <a class="video-toggle btn btn-sm z-depth-0" role="button" onclick="var el=this.closest('.col-sm-8, .col-sm-10').querySelector('div.video-embed.hidden');if(el)el.classList.toggle('open');">Video</a>
+        <a
+          class="video-toggle btn btn-sm z-depth-0"
+          role="button"
+          onclick="var el=this.closest('.col-sm-8, .col-sm-10').querySelector('div.video-embed.hidden');if(el)el.classList.toggle('open');"
+          >Video</a
+        >
       {% elsif entry.video %}
         <a href="{{ entry.video }}" class="btn btn-sm z-depth-0" role="button">Video</a>
       {% endif %}
@@ -362,7 +373,7 @@
       <div class="bibtex hidden">
         {% highlight bibtex %}
         {{- entry.bibtex | hideCustomBibtex -}}
-        {% endhighlight %}
+      {% endhighlight %}
       </div>
     {% endif %}
 
@@ -376,7 +387,8 @@
             style="width: 100%; max-width: 900px; height: auto; display: block; margin: 0 auto;"
             controls
             preload="metadata"
-            playsinline>
+            playsinline
+          >
             Your browser does not support the video tag.
           </video>
         </div>

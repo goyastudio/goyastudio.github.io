@@ -27,7 +27,7 @@
       "name": "Narnia labs",
       "position": "AI Researcher (Co-founder)",
       "url": "https://www.narnia.ai/?r=0",
-      "startDate": "2022-04-05",
+      "startDate": "2022-04-05"
     }
   ],
   "volunteer": [
@@ -118,20 +118,12 @@
     {
       "name": "Simulation",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Computational Fluid Dynamics",
-        "Finite Element Method"
-      ]
+      "keywords": ["Computational Fluid Dynamics", "Finite Element Method"]
     },
     {
       "name": "Artificial Intelligence",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "3D Generative Model",
-        "Reinforcement Learning",
-        "Graphics Processing"
-      ]
+      "keywords": ["3D Generative Model", "Reinforcement Learning", "Graphics Processing"]
     }
-
   ]
 }

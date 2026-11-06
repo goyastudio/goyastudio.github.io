@@ -27,6 +27,7 @@ Developed a generative AI pipeline that automates the design of internal structu
 ## My Role
 
 **AI Researcher, Narnia Labs**
+
 - Individual contributor on the surface (sheet) generation model that turns the stylist's outer surface into a valid internal structure
 - Contributed to encoding engineering constraints as learned priors so generated candidates are verification-ready
 

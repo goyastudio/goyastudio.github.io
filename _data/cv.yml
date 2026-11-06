@@ -18,7 +18,7 @@
         - title: Mobility (Major)
           contents:
             - Fusion of Phisics Integrity and AI Creativity
-    
+
     - title: Master
       institution: KAIST, Daejeon, Republic of Korea
       year: 2022.03-2024.02
@@ -31,13 +31,13 @@
             - Problem Solving Skill
             - Leadership
             - Entrepreneurship
-            
+
 - title: Experience
   type: time_table
   contents:
     - title: AI Researcher (Co-founder)
       institution: Narnia Labs
-      year: 2022 - 
+      year: 2022 -
       description:
         - AI algorithm development
         - Project Managing

@@ -148,4 +148,3 @@ _styles: >
 <h2>Domestic Conference</h2>
 {% bibliography --query @*[pubtype=domestic_conf]* %}
 </div>
-

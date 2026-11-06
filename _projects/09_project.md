@@ -28,6 +28,7 @@ This project develops an AI-based ship shape design support system in collaborat
 ## My Role
 
 **Project Manager, Narnia Labs**
+
 - Lead overall project management: scope definition, milestone planning, deliverables, and coordination with the KRISO consortium
 - Drive hands-on technical work on the generative AI foundation model for 3D ship shape design
 - Design methodologies for shape generation, exploration, and optimization tailored to naval architecture constraints
@@ -36,15 +37,18 @@ This project develops an AI-based ship shape design support system in collaborat
 ## Project Details
 
 ### Consortium
+
 - **Lead**: Korea Research Institute of Ships and Ocean Engineering (KRISO)
 - **Co-research (Industry)**: Narnia Labs
 - **Co-research (Academia)**: Chungnam National University, Sungshin Women's University, Kyung Hee University, University of Ulsan, Korea Maritime and Ocean University
 
 ### Scale
+
 - **Duration**: June 2026 - December 2030
 - **Total R&D budget**: approx. 16.2 billion KRW
 
 ### Goals
+
 - Develop an AI foundation model capable of generating and exploring diverse ship shapes
 - **Reduce ship design time by more than 50%** compared to conventional workflows
 - Move beyond designer-experience-dependent, iteration-heavy ship shape design
@@ -56,6 +60,7 @@ Ship shape design has traditionally relied heavily on the accumulated experience
 ## Impact
 
 Establishing a foundation model for ship shape design is expected to:
+
 - Dramatically shorten the concept-to-detail design cycle
 - Enable systematic exploration of a much larger design space than manual approaches
 - Provide a reusable AI backbone that can be transferred across different vessel types and design requirements

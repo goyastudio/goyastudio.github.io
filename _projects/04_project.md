@@ -27,6 +27,7 @@ Developed a 3D deep-learning framework for the design of automotive brake calipe
 ## My Role
 
 **Project Manager, Narnia Labs**
+
 - Led problem definition and scoping in collaboration with the client team
 - Owned client-facing communication and delivery milestones throughout the engagement
 - Drove hands-on technical work on the 3D deep-learning generative-design framework integrating a generator, evaluator, and optimizer

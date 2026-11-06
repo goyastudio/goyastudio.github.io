@@ -6,7 +6,13 @@
 
 html,
 body {
-  font-family: "IBM Plex Sans", "IBM Plex Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "IBM Plex Sans",
+    "IBM Plex Sans KR",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
 p,
@@ -855,7 +861,6 @@ footer.sticky-bottom {
             border-color: #b8860b;
           }
         }
-
       }
 
       .badges {

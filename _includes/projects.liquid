@@ -17,7 +17,7 @@
         {% if project.start_date and project.end_date %}
           <p class="text-muted" style="font-size: 0.9rem;">
             <i class="fa-regular fa-calendar"></i>
-            {{ project.start_date | date: "%Y.%m" }} - {{ project.end_date | date: "%Y.%m" }}
+            {{ project.start_date | date: '%Y.%m' }} - {{ project.end_date | date: '%Y.%m' }}
           </p>
         {% endif %}
         <div class="row ml-1 mr-1 p-0">
