@@ -130,6 +130,11 @@ _styles: >
 </div>
 
 <div class="pub-section">
+<h2>Under Review</h2>
+{% bibliography --group_by none --query @*[pubtype=under_review]* %}
+</div>
+
+<div class="pub-section">
 <h2>International Conference</h2>
 {% bibliography --query @*[pubtype=intl_conf]* %}
 </div>
