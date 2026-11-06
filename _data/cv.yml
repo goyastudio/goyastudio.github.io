@@ -43,6 +43,28 @@
         - Project Managing
         - AI Research
 
+- title: Datasets
+  type: time_table
+  contents:
+    - title: 3D Asset–Object Modeling Image Pair Dataset / 3D 에셋-사물 모델링 이미지 쌍 데이터
+      institution: AI Hub (NIA), Smart Design Lab, KAIST
+      year: 2022
+      description:
+        - 10,000 3D object assets (402 classes) with 960,000 multi-view RGB, mask, depth, and normal renders
+      linkitems:
+        - link: https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71412
+          linkname: AI Hub
+    - title: "DeepJEB: 3D Deep Learning-based Synthetic Jet Engine Bracket Dataset"
+      institution: Journal of Mechanical Design
+      year: 2024
+      description:
+        - Synthetic 3D jet engine bracket geometries with paired structural analysis results
+      linkitems:
+        - link: https://www.narnia.ai/dataset
+          linkname: dataset
+        - link: https://arxiv.org/abs/2406.09047
+          linkname: arXiv
+
 - title: Honors and Awards
   type: time_table
   contents:
