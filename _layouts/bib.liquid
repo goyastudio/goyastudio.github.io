@@ -177,9 +177,13 @@
     {% endif %}
     {% if entry.month %}
       {% capture entrymonth %}{{ " " }}{{ entry.month | capitalize }}{% endcapture %}
+    {% else %}
+      {% assign entrymonth = '' %}
     {% endif %}
-    {% if entry.year %}
+    {% if entry.year and entry.pubtype != 'under_review' %}
       {% capture entryyear %}{{ " " }}{{ entry.year }}{% endcapture %}
+    {% else %}
+      {% assign entryyear = '' %}
     {% endif %}
     {% if entry.location %}
       {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
@@ -203,12 +207,7 @@
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.abstract %}
-        <a
-          class="abstract btn btn-sm z-depth-0"
-          role="button"
-          onclick="var el=this.closest('.col-sm-8, .col-sm-10').querySelector('div.abstract.hidden');if(el)el.classList.toggle('open');"
-          >Abs</a
-        >
+        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       {% endif %}
       {% if entry.doi %}
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
